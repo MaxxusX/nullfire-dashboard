@@ -1,8 +1,8 @@
 {
-	"name": "nullfire-site",
+	"name": "nullfire-dashboard",
 	"type": "module",
 	"private": true,
-	"version": "0.5.0",
+	"version": "0.0.1",
 	"scripts": {
 		"test": "astro check --minimumFailingSeverity hint",
 		"dev": "astro dev",
@@ -22,9 +22,9 @@
 		"prettier": "3.4.2",
 		"prettier-plugin-astro": "^0.14.1"
 	},
-	"packageManager": "pnpm@9.15.2",
+	"packageManager": "pnpm@9.15.5",
 	"engines": {
-		"node": ">=20",
+		"node": ">=22",
 		"pnpm": ">=9"
 	}
 }
