@@ -16,7 +16,7 @@
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Robots-Tag: noindex, nofollow, nosnippet, noimageindex
+  X-Robots-Tag: noindex, nofollow, nosnippet, noimageindex, noarchive, nocache
   X-XSS-Protection: 0
 
 /fonts/*
