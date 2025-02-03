@@ -4,7 +4,7 @@
   Allow: GET, HEAD
   Cache-Control: max-age=43200, stale-while-revalidate=43200, stale-if-error=86400
   Content-Language: en-US
-  Content-Security-Policy: default-src 'none'; script-src 'self'; script-src-elem 'none'; script-src-attr 'none'; style-src 'self'; style-src-elem 'none'; style-src-attr 'none'; worker-src 'none'; font-src 'self'; img-src 'self' data:; media-src 'self' data:; frame-src 'none'; child-src 'none'; connect-src 'self'; prefetch-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content
+  Content-Security-Policy: default-src 'none'; script-src 'self'; script-src-elem 'self'; script-src-attr 'none'; style-src 'self'; style-src-elem 'self'; style-src-attr 'none'; worker-src 'none'; font-src 'self'; img-src 'self' data:; media-src 'self' data:; frame-src 'none'; child-src 'none'; connect-src 'self'; prefetch-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
