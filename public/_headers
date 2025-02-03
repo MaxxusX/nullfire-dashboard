@@ -16,12 +16,11 @@
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
+  X-Robots-Tag: noindex, nofollow, nosnippet, noimageindex
   X-XSS-Protection: 0
 
 /fonts/*
   Cache-Control: max-age=31536000, stale-while-revalidate=31536000, stale-if-error=31536000, immutable
-  X-Robots-Tag: indexifembedded, noindex, nofollow, nosnippet
 
 /_astro/*
   Cache-Control: max-age=31536000, stale-while-revalidate=31536000, stale-if-error=31536000, immutable
-  X-Robots-Tag: indexifembedded, noindex, nofollow, nosnippet
