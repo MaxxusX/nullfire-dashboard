@@ -1,9 +1,10 @@
 /*
-  Access-Control-Allow-Origin: *
-  Access-Control-Allow-Methods: GET
+  Access-Control-Allow-Origin: https://maxxusx.github.io
+  Access-Control-Allow-Methods: GET, HEAD
+  Allow: GET, HEAD
   Cache-Control: max-age=43200, stale-while-revalidate=43200, stale-if-error=86400
   Content-Language: en-US
-  Content-Security-Policy: default-src 'none'; script-src 'self'; script-src-elem 'self'; script-src-attr 'none'; style-src 'self' https: data: 'unsafe-inline'; style-src-elem 'self' https: data: 'unsafe-inline'; style-src-attr 'self' https: data: 'unsafe-inline'; worker-src 'self'; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; frame-src 'self' https:; child-src 'self' https:; connect-src 'self' https:; prefetch-src 'self' https:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https:; frame-ancestors 'self'; upgrade-insecure-requests; block-all-mixed-content
+  Content-Security-Policy: default-src 'none'; script-src 'self'; script-src-elem 'none'; script-src-attr 'none'; style-src 'self'; style-src-elem 'none'; style-src-attr 'none'; worker-src 'none'; font-src 'self'; img-src 'self' data:; media-src 'self' data:; frame-src 'none'; child-src 'none'; connect-src 'self'; prefetch-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
@@ -11,10 +12,11 @@
   Permissions-Policy: accelerometer=(),ambient-light-sensor=(),attribution-reporting=(),autoplay=(),battery=(),bluetooth=(),browsing-topics=(),camera=(),compute-pressure=(),conversion-measurement=(),digital-credentials-get=(),display-capture=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),hid=(),identity-credentials-get=(),idle-detection=(),local-fonts=(),magnetometer=(),microphone=(),midi=(),otp-credentials=(),payment=(),picture-in-picture=(),publickey-credentials-create=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),speaker-selection=(),storage-access=(),usb=(),web-share=(),window-management=(),xr-spatial-tracking=()
   Referrer-Policy: no-referrer
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Vary: Origin
   X-Content-Type-Options: nosniff
   X-DNS-Prefetch-Control: off
   X-Download-Options: noopen
-  X-Frame-Options: SAMEORIGIN
+  X-Frame-Options: DENY
   X-Permitted-Cross-Domain-Policies: none
   X-Robots-Tag: noindex, nofollow, nosnippet, noimageindex, noarchive, nocache
   X-XSS-Protection: 0
@@ -24,3 +26,8 @@
 
 /_astro/*
   Cache-Control: max-age=31536000, stale-while-revalidate=31536000, stale-if-error=31536000, immutable
+
+/api/*
+  Access-Control-Allow-Methods: GET, POST, HEAD
+  Allow: GET, POST, HEAD
+  Cache-Control: max-age=43200, stale-if-error=43200
