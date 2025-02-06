@@ -1,7 +1,7 @@
-import { env } from "node:process";
-import { defineConfig, passthroughImageService } from "astro/config";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
+import { defineConfig, passthroughImageService } from "astro/config";
+import { env } from "node:process";
 //import purgecss from "astro-purgecss";
 
 const isProd = env.NODE_ENV !== "development";
@@ -11,12 +11,7 @@ export default defineConfig({
 	base: "/nullfire-dashboard/",
 	trailingSlash: "ignore",
 	output: "static",
-	integrations: [
-		react(),
-		tailwindcss({
-			applyBaseStyles: false,
-		}),
-	],
+	integrations: [react()],
 	compressHTML: isProd,
 	scopedStyleStrategy: "class",
 	build: {
@@ -71,16 +66,14 @@ export default defineConfig({
 			target: ["es2020", "edge126", "firefox115", "chrome109", "safari15.6"],
 			assetsInlineLimit: 0,
 			cssCodeSplit: false,
-			cssMinify: isProd ? "lightningcss" : false,
+			cssMinify: "lightningcss",
 			minify: isProd ? "esbuild" : false,
 			sourcemap: isProd,
 			reportCompressedSize: false,
 		},
 
 		plugins: [
-			tailwindcss({
-				applyBaseStyles: false,
-			}),
+			tailwindcss(),
 		],
 	},
 });
