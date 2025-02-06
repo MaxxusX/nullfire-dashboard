@@ -17,6 +17,7 @@ made w/ astro
     - [ ] username
     - [ ] user id
     - [ ] hwid
+    - [ ] toggle tester
     - [ ] whitelist status (yeah / nah / temp & hrs left)
     - [ ] add to whitelist
       - [ ] permenantly
