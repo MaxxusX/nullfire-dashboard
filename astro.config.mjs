@@ -1,24 +1,21 @@
 import { env } from "node:process";
 import { defineConfig, passthroughImageService } from "astro/config";
+import react from "@astrojs/react";
+import tailwindcss from "@tailwindcss/vite";
 //import purgecss from "astro-purgecss";
 
 const isProd = env.NODE_ENV !== "development";
 
 export default defineConfig({
-	site: "https://maxxusx.github.io/nullfire-site/",
-	base: "/nullfire-site/",
+	site: "https://maxxusx.github.io/nullfire-dashboard/",
+	base: "/nullfire-dashboard/",
 	trailingSlash: "ignore",
 	output: "static",
 	integrations: [
-		/*	
- 		purgecss({
-			fontFace: true, // removes any unused @font-face if set to true
-			keyframes: true, // removes unused keyframes by setting if set to true
-			rejected: true, // scan through the removed list to see if there's anything wrong
-			rejectedCss: false, // keeps the discarded CSS
-			variables: false, // removes any unused CSS variables if set to true
-  	}),
-		*/
+		react(),
+		tailwindcss({
+			applyBaseStyles: false,
+		}),
 	],
 	compressHTML: isProd,
 	scopedStyleStrategy: "class",
@@ -36,16 +33,17 @@ export default defineConfig({
 	image: {
 		service: passthroughImageService(), // temp. cannot install sharp rn.
 		/*
-		service: {
-			config: {
-				limitInputPixels: false,
-			},
-		},
-		*/
+        service: {
+            config: {
+                limitInputPixels: false,
+            },
+        },
+        */
 	},
 	vite: {
 		mode: isProd ? "production" : "development",
 		logLevel: "info",
+
 		css: {
 			transformer: "lightningcss",
 			lightningcss: {
@@ -67,6 +65,7 @@ export default defineConfig({
 				},
 			},
 		},
+
 		build: {
 			// vite default: ["es2020", "edge88", "firefox78", "chrome87", "safari14"]
 			target: ["es2020", "edge126", "firefox115", "chrome109", "safari15.6"],
@@ -77,5 +76,11 @@ export default defineConfig({
 			sourcemap: isProd,
 			reportCompressedSize: false,
 		},
+
+		plugins: [
+			tailwindcss({
+				applyBaseStyles: false,
+			}),
+		],
 	},
 });
