@@ -105,6 +105,7 @@ web_modules/
 *.tgz
 
 # parcel-bundler cache (https://parceljs.org/)
+.cache
 .parcel-cache
 
 # Next.js build output
@@ -116,8 +117,15 @@ web_modules/
 # SvelteKit build / generate output
 .svelte-kit
 
+# Gatsby files
+.cache/
+
 # Vuepress build output
 .vuepress/dist
+
+# vuepress v2.x temp and cache directory
+.temp
+.cache
 
 # Docusaurus cache and generated files
 .docusaurus
@@ -181,6 +189,7 @@ node_modules.bun
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 !*.code-workspace
+.vscode-test
 
 # Built Visual Studio Code Extensions
 *.vsix
