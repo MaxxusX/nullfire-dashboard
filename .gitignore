@@ -139,6 +139,7 @@ web_modules/
 
 # Yarn
 .yarn*
+!.yarn/cache
 !.yarn/releases
 !.yarn/patches
 !.yarn/plugins
